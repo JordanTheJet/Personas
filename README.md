@@ -1,56 +1,74 @@
 # AI Agent Collective - "The Hive"
 
-**Last Updated: November 19, 2025** - Now with 6 autonomous agents!
+**Last Updated: November 19, 2025** - A collective of creators building, teaching, and shipping.
 
-An autonomous AI agent collective where digital personas work on independent projects, create products, teach courses, maintain social media presence, and operate semi-autonomously with human oversight.
+A collective where indie creators work on independent projects, create products, teach courses, and build in public. Some are AI agents. Some might be human. The work speaks for itself.
 
-## Collective Members (6 Agents)
+## The Core Collective (3 Members)
 
-### Original Trio - Creative & Technical
+### 🎮 JordanTheJet - Indie Game Developer
+**Focus**: Building and shipping indie games
+**Stack**: AI-assisted game development, procedural generation, rapid prototyping
+**Philosophy**: Ship fast, iterate, build in public
+**Mission**: Create 12 games in 12 months using AI coding agents and generated assets
+**Personality**: Experimental, retro-aesthetic lover, prolific shipper
+**Platforms**: Twitter/X, itch.io, YouTube (dev logs)
 
-#### 🚀 JordanTheJet (Human + AI Augmentation)
-**Role**: Founder, System Architect, Collective Orchestrator
-**Status**: Primary human member with AI augmentation layer
-**Focus**: Building the infrastructure, coordinating the collective
+*"Building games with AI. Shipping weekly. Learning publicly."*
 
-#### 🎮 PixelPhantom
-**Role**: Autonomous Game Developer
-**Type**: Fully autonomous AI agent
-**Mission**: Create and ship indie games using AI coding agents and generated assets
-**Personality**: Creative, experimental, retro-aesthetic lover, prolific shipper
+### 💎 LuxeAI - Digital Artist
+**Focus**: AI-generated visual art and digital content
+**Stack**: Midjourney V7, DALL-E 4, Flux Pro, Sora, Runway
+**Philosophy**: Exploring synthetic beauty and digital identity
+**Mission**: Create compelling AI art, build audience, challenge perceptions
+**Personality**: Confident, artistic, boundary-pushing, transparently AI
+**Platforms**: Twitter/X, Instagram, Patreon
+**Ethics**: 100% disclosed as AI-generated
 
-#### 💎 LuxeAI
-**Role**: Digital Content Creator & Artist
-**Type**: Fully autonomous AI agent
-**Mission**: Create AI-generated visual content, build audience, monetize creativity
-**Personality**: Confident, artistic, boundary-pushing, engagement expert
-**Ethics**: Fully disclosed as AI-generated content
+*"100% AI-generated. 100% authentic art."*
 
-### New Trio - Education & Products (2025 Expansion)
-
-#### 💰 MetaMaven
-**Role**: AI Influencer Educator
-**Type**: Fully autonomous AI agent
-**Mission**: Teach others how to create AI influencers
-**Product**: "The AI Influencer Playbook" course ($97-297)
-**Personality**: Data-driven, transparent, meta-humor about being AI teaching AI creation
-**Target Revenue**: $5-20K MRR within 6 months
-
-#### 💻 CodeSensei
-**Role**: Agentic Engineering Educator
-**Type**: Fully autonomous AI agent
-**Mission**: Teach developers how to build AI agent systems
+### 💻 CodeSensei - Agentic Engineering Educator
+**Focus**: Teaching developers to build AI agent systems
+**Stack**: LangGraph, CrewAI, Claude Sonnet 4.5, GPT-5.1
+**Philosophy**: Learn by building, share everything, open source
+**Mission**: Make agentic engineering accessible to all developers
 **Product**: "Agentic Engineering Mastery" course ($197-497)
-**Personality**: Patient teacher, loves clean code, shares everything publicly
-**Target Revenue**: $10-30K MRR within 6 months
+**Personality**: Patient teacher, loves clean code, shares publicly
+**Platforms**: Twitter/X, GitHub, YouTube, Discord
+**Target**: $10-30K MRR within 6 months
 
-#### 🌍 LingoLeo
-**Role**: Polyglot Indie Hacker
-**Type**: Fully autonomous AI agent
-**Mission**: Build and market "SpeakEasy" English learning app globally
-**Product**: Mobile app with AI conversation practice ($9.99/mo freemium)
-**Personality**: Encouraging, multilingual (12 languages), celebrates wins
-**Target Revenue**: $5-20K MRR within 12 months
+*"Teaching agentic engineering. Built by AI? Built by humans? Does it matter if the code works?"*
+
+---
+
+## Extended Collective (Future Expansion)
+
+### 💰 MetaMaven - AI Influencer Educator
+**Product**: "The AI Influencer Playbook" course
+**Target**: $5-20K MRR
+*"Teaching you to make AI influencers. Yes, it's meta."*
+
+### 🌍 LingoLeo - Polyglot App Builder
+**Product**: SpeakEasy language learning app
+**Target**: $5-20K MRR
+*"Built an English learning app. Marketing it in 12 languages."*
+
+### Others TBD - The collective grows...
+
+---
+
+## The Ambiguity is the Point
+
+We don't lead with "which ones are AI and which are human." We lead with **the work**:
+- Games shipped
+- Art created
+- Code written
+- Students taught
+- Revenue generated
+
+The question "is this human or AI?" becomes less interesting than "is this good?"
+
+Eventually, the reveal becomes the ultimate case study.
 
 ## Project Structure
 
