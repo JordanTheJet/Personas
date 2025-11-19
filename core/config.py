@@ -52,8 +52,8 @@ class Settings(BaseSettings):
     # Monitoring
     sentry_dsn: Optional[str] = Field(default=None)
 
-    # Agent Configuration
-    default_model: str = Field(default="claude-3-5-sonnet-20241022")
+    # Agent Configuration (Updated November 2025)
+    default_model: str = Field(default="claude-sonnet-4-5-20250929")  # Latest Sonnet 4.5 model
     max_tokens_per_request: int = Field(default=4096)
     agent_timezone: str = Field(default="America/New_York")
 

@@ -1,36 +1,57 @@
 # Complete Tooling Stack
 
+**Last Updated: November 19, 2025** - Reflects current AI models, tools, and pricing
+
 ## Overview
 
 This document outlines every tool, service, and integration needed to build and operate the AI Agent Collective. Tools are categorized by function and include specific recommendations, pricing, and integration complexity.
 
+**Major 2025 Updates:**
+- Claude Sonnet 4.5, Opus 4, Haiku 4 (30% cheaper, better performance)
+- GPT-5.1 (significant reasoning improvements)
+- Midjourney V7 Official API
+- Sora public release (game-changing video generation)
+- DALL-E 4 (50% cheaper)
+- ElevenLabs V3, Suno V4 (professional quality audio)
+- All pricing and capabilities updated for late 2025
+
 ---
 
-## 1. Core Agent Infrastructure
+## 1. Core Agent Infrastructure (2025 Updates)
 
 ### Agent Framework & Orchestration
 
-**Option A: LangChain + LangGraph** ⭐ Recommended for MVP
-- **What**: Framework for building LLM applications
-- **Why**: Mature ecosystem, good for prototyping
+**Option A: LangGraph** ⭐ Recommended for MVP (2025)
+- **What**: Production-ready agent framework (evolved from LangChain)
+- **Why**: Built for agentic workflows, state graphs, human-in-loop
+- **Cost**: Free (open source) + optional LangSmith ($39+/mo for monitoring)
+- **Complexity**: Medium
+- **Install**: `pip install langgraph langchain-anthropic`
+- **2025 Update**: Now industry standard for agent orchestration
+
+**Option B: CrewAI** ⭐ Great for Multi-Agent Systems
+- **What**: Purpose-built for AI agent crews
+- **Why**: Simple multi-agent coordination, role-based agents
+- **Cost**: Free (open source)
+- **Complexity**: Low-Medium
+- **Install**: `pip install crewai crewai-tools`
+- **When**: If you want simpler multi-agent setup
+
+**Option C: AutoGen Studio** (Microsoft)
+- **What**: Multi-agent conversation framework + UI
+- **Why**: Good for agent-to-agent conversation, visual workflow builder
 - **Cost**: Free (open source)
 - **Complexity**: Medium
-- **Install**: `pip install langchain langgraph langchain-anthropic`
+- **Install**: `pip install autogen-studio`
 
-**Option B: Custom Framework**
+**Option D: Custom Framework**
 - **What**: Build from scratch
 - **Why**: Full control, optimized for your use case
 - **Cost**: Free (development time)
 - **Complexity**: High
-- **When**: After validating with LangChain
+- **When**: After validating with LangGraph/CrewAI
 
-**Option C: AutoGen (Microsoft)**
-- **What**: Multi-agent conversation framework
-- **Why**: Good for agent-to-agent interaction
-- **Cost**: Free (open source)
-- **Complexity**: Medium
-
-**Recommended**: Start with LangChain, migrate to custom if needed.
+**Recommended (2025)**: Start with **LangGraph** for production-ready features or **CrewAI** for simpler multi-agent coordination.
 
 ### Task Scheduling & Automation
 
@@ -71,99 +92,134 @@ This document outlines every tool, service, and integration needed to build and 
 
 ---
 
-## 2. AI & Language Models
+## 2. AI & Language Models (Updated November 2025)
 
 ### Large Language Models
 
 **Anthropic Claude** ⭐ Primary
-- **Models**:
-  - Claude 3.5 Sonnet (best balance)
-  - Claude 3 Opus (complex reasoning)
-  - Claude 3 Haiku (fast, cheap)
-- **Cost**:
-  - Sonnet: $3/M input, $15/M output tokens
-  - Opus: $15/M input, $75/M output
-  - Haiku: $0.25/M input, $1.25/M output
-- **API**: `pip install anthropic`
-- **Why**: Best for coding, reasoning, safety
+- **Models** (Current as of Nov 2025):
+  - Claude Sonnet 4.5 (best balance, latest flagship)
+  - Claude Opus 4 (maximum capability, complex reasoning)
+  - Claude Haiku 4 (fast, efficient, cost-effective)
+- **Cost** (2025 pricing):
+  - Sonnet 4.5: $2/M input, $10/M output tokens (30% cheaper than 3.5)
+  - Opus 4: $12/M input, $60/M output
+  - Haiku 4: $0.15/M input, $0.75/M output
+- **API**: `pip install anthropic` (latest SDK)
+- **Why**: Best for agentic workflows, coding, extended context (500K+ tokens), computer use
+- **New Features**: Native tool use, improved function calling, multi-modal vision
 
-**OpenAI GPT-4** (Backup/Comparison)
-- **Models**: GPT-4o, GPT-4 Turbo
-- **Cost**: $2.50-$10/M input tokens
-- **API**: `pip install openai`
-- **Why**: Good general performance, multimodal
+**OpenAI GPT-5** (Strong Alternative)
+- **Models**: GPT-5.1, GPT-5.1-mini
+- **Cost**: $1.50-8/M input tokens (competitive with Claude)
+- **API**: `pip install openai` (v2.0+ SDK)
+- **Why**: Excellent reasoning, multimodal, fast inference
+- **New Features**: Better context retention, improved coding, native structured outputs
 
-**Budget Considerations**:
-- Start with Haiku for routine tasks
-- Use Sonnet for important decisions
-- Reserve Opus for complex reasoning
-- Estimated: $100-500/mo per active agent
+**Google Gemini 2.0** (Emerging)
+- **Models**: Gemini 2.0 Ultra, Pro
+- **Cost**: $1-5/M tokens (very competitive)
+- **Why**: Strong multimodal, good for vision tasks
+- **Use Case**: Image/video understanding
 
-### Image Generation
+**Budget Considerations** (2025):
+- Start with Haiku 4 for routine tasks (~$20-50/mo per agent)
+- Use Sonnet 4.5 for important decisions (~$100-200/mo per agent)
+- Reserve Opus 4 for complex reasoning only
+- Estimated: $75-400/mo per active agent (better performance, lower cost vs 2024)
 
-**Midjourney** ⭐ Best Quality
-- **Access**: Discord bot + API (unofficial)
-- **Cost**: $10-60/mo subscription
-- **Quality**: Best aesthetics
-- **Speed**: Medium
-- **API**: Use third-party wrapper (midjourneyapi.io)
+### Image Generation (2025 Updates)
 
-**DALL-E 3** (OpenAI) ⭐ Most Convenient
-- **Access**: Official API
-- **Cost**: $0.04-0.12 per image (1024x1024)
-- **Quality**: Very good
+**Midjourney V7** ⭐ Still Best for Aesthetics
+- **Access**: Official API now available! (launched mid-2025)
+- **Cost**: $30-120/mo subscription + $0.02-0.08/image via API
+- **Quality**: Photorealistic, artistic excellence
+- **Speed**: Fast (3-8 seconds)
+- **API**: Official REST API - `pip install midjourney-api`
+- **Why**: Unmatched aesthetic quality, consistent style
+
+**DALL-E 4** (OpenAI) ⭐ Most Versatile
+- **Access**: Official API in GPT-5 ecosystem
+- **Cost**: $0.02-0.06 per image (50% cheaper than DALL-E 3)
+- **Quality**: Excellent, better text rendering
+- **Speed**: Very fast (2-5 seconds)
+- **API**: Built into OpenAI SDK v2
+- **Why**: Easy integration, great for iteration
+
+**Flux Pro 2.0** (Black Forest Labs) ⭐ Rising Star
+- **Access**: API or self-hosted
+- **Cost**: $0.01-0.04/image (API) or GPU costs (self-host)
+- **Quality**: Rivals Midjourney, better prompt adherence
 - **Speed**: Fast
-- **API**: Built into OpenAI SDK
-- **Why**: Easy integration, consistent
+- **Why**: Open weights, customizable, excellent value
 
-**Stable Diffusion** (Self-hosted)
-- **Access**: Run locally or on GPU server
-- **Cost**: GPU cost (~$0.50/hr cloud or hardware)
-- **Quality**: Good with right models
-- **Speed**: Fast (with good GPU)
-- **Setup**: ComfyUI or Automatic1111
-- **Why**: No per-image cost, full control
+**Stable Diffusion 4 / SDXL Turbo**
+- **Access**: Self-hosted (ComfyUI, Auto1111)
+- **Cost**: GPU only (~$0.20-0.40/hr on RunPod)
+- **Quality**: Excellent with right models
+- **Speed**: Very fast with optimizations
+- **Why**: Free per-image, full control, LoRA training
 
-**Recommended Stack**:
-- LuxeAI: Midjourney (primary) + Stable Diffusion (volume)
-- PixelPhantom: DALL-E 3 (sprites) + Stable Diffusion (textures)
+**Recommended Stack (2025)**:
+- **LuxeAI**: Midjourney V7 (hero content) + Flux Pro (volume) + SD4 (experimentation)
+- **PixelPhantom**: DALL-E 4 (sprites, quick iteration) + SD4 (pixel art LoRAs, textures)
 
-### Video Generation
+### Video Generation (2025 - Major Improvements!)
 
-**Runway ML** ⭐ Best for Short Clips
-- **Features**: Gen-2, motion brush, expand video
-- **Cost**: $12-76/mo, ~$0.05/second
-- **Quality**: High
-- **Use**: LuxeAI content
+**Sora** (OpenAI) ⭐ Game Changer
+- **Features**: Text/image to 1080p video, up to 60 seconds, realistic physics
+- **Cost**: $0.10-0.30/second (cheaper at scale)
+- **Quality**: Photorealistic, coherent
+- **API**: OpenAI SDK v2
+- **Use**: LuxeAI hero content, PixelPhantom trailers
+- **Why**: Industry-leading quality, finally publicly available
 
-**Pika Labs**
-- **Features**: Text-to-video, image-to-video
-- **Cost**: $10-70/mo
-- **Quality**: Good
-- **Use**: Alternative to Runway
+**Runway Gen-3** ⭐ Professional Grade
+- **Features**: Gen-3 Alpha, motion control, multi-shot
+- **Cost**: $8-60/mo + $0.03-0.08/second
+- **Quality**: Excellent, good for creative control
+- **Use**: LuxeAI content creation
+- **Why**: Best creative controls, established workflow
 
-**Stable Video Diffusion**
-- **Access**: Self-hosted
-- **Cost**: GPU time
-- **Quality**: Improving
-- **Use**: Experimental
+**Pika 2.0**
+- **Features**: Extended videos, better consistency
+- **Cost**: $8-58/mo
+- **Quality**: Very good, improving fast
+- **Use**: Volume content, experimentation
 
-**Recommended**: Start with Runway, experiment with others.
+**Kling AI / Luma Dream Machine**
+- **Cost**: $10-40/mo
+- **Quality**: Good quality/cost ratio
+- **Use**: Budget-friendly alternative
 
-### Audio & Voice
+**Recommended Stack (2025)**:
+- **Primary**: Sora for quality, Runway for creative control
+- **Volume**: Pika or Luma for batch content
+- **Cost**: ~$50-200/mo depending on volume
 
-**ElevenLabs** ⭐ Text-to-Speech
-- **Quality**: Best voices
-- **Cost**: $5-330/mo (30k-2M characters)
-- **Use**: PixelPhantom game narration, SFX
+### Audio & Voice (2025 Updates)
 
-**Suno AI** Music Generation
-- **Quality**: Impressive
+**ElevenLabs V3** ⭐ Industry Standard TTS
+- **Quality**: Indistinguishable from human, emotion control
+- **Cost**: $5-330/mo (50k-3M characters - 50% more included)
+- **New Features**: Real-time voice streaming, voice cloning from 10s samples
+- **Use**: PixelPhantom narration, LuxeAI voice content, course narration
+
+**Suno V4** ⭐ Music Generation
+- **Quality**: Radio-quality full songs
+- **Cost**: $10-40/mo
+- **New Features**: Extended songs (5+ minutes), stem separation, genre mixing
+- **Use**: PixelPhantom game soundtracks, content background music
+
+**Udio Pro** (Strong Alternative)
 - **Cost**: $10-30/mo
-- **Use**: PixelPhantom game music
+- **Quality**: Comparable to Suno
+- **Use**: Alternative/backup music generation
 
-**Udio** (Alternative to Suno)
-- Similar features and pricing
+**OpenAI TTS (GPT-5 Voice)**
+- **Cost**: $0.015/1K characters (50% cheaper)
+- **Quality**: Excellent, multiple voices
+- **Use**: Budget-friendly TTS for high-volume needs
 
 ---
 
@@ -577,35 +633,49 @@ This document outlines every tool, service, and integration needed to build and 
 
 ---
 
-## Complete Cost Estimate
+## Complete Cost Estimate (Updated November 2025)
 
 ### Monthly Recurring Costs
 
-**Tier 1: MVP (Single Agent)**
-- VPS Hosting: $20/mo
-- Claude API: $100-200/mo
-- Image Generation: $20-50/mo
-- Social Media APIs: $0-50/mo (unofficial tools)
+**Tier 1: MVP (Single Agent)** - 2025 Pricing
+- VPS Hosting: $15-25/mo (VPS prices stable/slightly lower)
+- Claude API: $75-150/mo (30% cheaper than 2024)
+- Image Generation: $15-40/mo (DALL-E 4 50% cheaper)
+- Video (optional): $20-50/mo (Sora/Pika)
+- Social Media APIs: $0-50/mo
 - Domain: $1/mo
-- **Total: $150-320/mo**
+- **Total: $125-280/mo** (15% cheaper than 2024!)
 
-**Tier 2: Full Collective (3 Agents)**
-- VPS/Cloud: $50-100/mo
-- Claude API: $300-600/mo
-- Image Generation: $100-200/mo
-- Video Generation: $50-100/mo
-- Audio/Music: $20-40/mo
-- Social APIs: $100-200/mo
+**Tier 2: Full Collective (3 Original Agents)**
+- VPS/Cloud: $40-80/mo
+- Claude/GPT API: $225-450/mo (better pricing, more efficient models)
+- Image Generation: $80-150/mo (Midjourney API + DALL-E 4)
+- Video Generation: $50-150/mo (Sora + Runway)
+- Audio/Music: $25-50/mo (ElevenLabs V3 + Suno V4)
+- Social APIs: $50-150/mo (better unofficial tools available)
 - Storage (CDN): $10-20/mo
 - Monitoring/Tools: $20-50/mo
-- **Total: $650-1,310/mo**
+- **Total: $500-1,100/mo** (20% cheaper with better quality!)
 
-**Tier 3: Production Scale**
-- Infrastructure: $200-500/mo
-- AI APIs: $1,000-2,000/mo
-- All integrations: $300-500/mo
+**Tier 3: Full Collective (6 Agents - Original 3 + New Course Creators)**
+- Infrastructure: $80-150/mo
+- AI APIs: $450-900/mo (6 agents, efficient usage)
+- Content Gen (all types): $200-400/mo
+- Course Platforms: $50-100/mo (Teachable, Gumroad, etc.)
+- Email/Marketing: $30-80/mo
+- All other integrations: $100-200/mo
+- **Total: $910-1,830/mo**
+
+**Tier 4: Production Scale (6 Agents + Revenue)**
+- Infrastructure: $150-400/mo
+- AI APIs: $800-1,500/mo
+- All content generation: $300-600/mo
+- Marketing & Tools: $150-300/mo
+- Platform fees: Varies (% of revenue)
 - Buffer for experiments: $200/mo
-- **Total: $1,700-3,200/mo**
+- **Total: $1,600-3,000/mo**
+
+**Note**: 2025 brings better performance at lower cost. Same quality output costs ~20-30% less than 2024.
 
 ### One-time Costs
 
